@@ -62,7 +62,7 @@ import math
 # カスタマイズ用変数
 
 # gExportDirPath  = 'k:\\faceExp\\'           # 保存先フォルダパス (Windows)
-gExportDirPath  = '/content/drive/MyDrive/faceset/faceset_out/'           # 保存先フォルダパス (GoogleColab)
+gExportDirPath  = '/content/drive/MyDrive/faceExporter/face_out/'           # 保存先フォルダパス (GoogleColab)
 gExportSmall    = '_small'                  # 小さい画像保存先フォルダ名
 gFilePrefix     = 'f_'                      # ファイル名プリフィックス (ファイル名の先頭につける文字列)
 gFileSuffix     = '.png'                    # ファイルの拡張子 '.png' or '.jpg'
