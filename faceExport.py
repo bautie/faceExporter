@@ -71,7 +71,7 @@ gExportSmall    = '_small'                  # 小さい画像保存先フォル�
 gFilePrefix     = 'f_'                      # ファイル名プリフィックス (ファイル名の先頭につける文字列)
 gFileSuffix     = '.png'                    # ファイルの拡張子 '.png' or '.jpg'
 gMarginRate     = 0.7                       # マージン ( 1.0 だと、顔9個分の面積になる )
-gMinSize        = 500                       # サイズ境界 顔の両方の辺がこれ未満の場合は gExportSmall へ出力する
+gMinSize        = 200                       # サイズ境界 顔の両方の辺がこれ未満の場合は gExportSmall へ出力する
 
 gRun            = True                      # 実行したくないときは False
 
