@@ -128,4 +128,5 @@ def run( rects, srcImage ):
         # Colabのコンソールに表示
         clear_output() 
         logImg = cv2.imread(filePath, cv2.IMREAD_UNCHANGED)
-        cv2_imshow(img)
+        cv2_imshow(logImg)
+        
