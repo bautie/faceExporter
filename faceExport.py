@@ -59,6 +59,10 @@ import cv2
 import time
 import math
 
+# Colab用
+from IPython.display import clear_output
+from google.colab.patches import cv2_imshow
+
 # カスタマイズ用変数
 
 # gExportDirPath  = 'k:\\faceExp\\'           # 保存先フォルダパス (Windows)
@@ -67,7 +71,7 @@ gExportSmall    = '_small'                  # 小さい画像保存先フォル�
 gFilePrefix     = 'f_'                      # ファイル名プリフィックス (ファイル名の先頭につける文字列)
 gFileSuffix     = '.png'                    # ファイルの拡張子 '.png' or '.jpg'
 gMarginRate     = 0.7                       # マージン ( 1.0 だと、顔9個分の面積になる )
-gMinSize        = 200                       # サイズ境界 顔の両方の辺がこれ未満の場合は gExportSmall へ出力する
+gMinSize        = 500                       # サイズ境界 顔の両方の辺がこれ未満の場合は gExportSmall へ出力する
 
 gRun            = True                      # 実行したくないときは False
 
@@ -120,3 +124,8 @@ def run( rects, srcImage ):
             filePath = gExportDirPath + gExportSmall + '/' + fileName
 
         cv2.imwrite( filePath, faceImage, [ cv2.IMWRITE_JPEG_QUALITY, 100 ] )
+
+        # Colabのコンソールに表示
+        clear_output() 
+        logImg = cv2.imread(filePath, cv2.IMREAD_UNCHANGED)
+        cv2_imshow(img)
