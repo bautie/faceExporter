@@ -60,8 +60,8 @@ import time
 import math
 
 # Colab用
-from IPython.display import clear_output
-from google.colab.patches import cv2_imshow
+# from IPython.display import clear_output
+# from google.colab.patches import cv2_imshow
 
 # カスタマイズ用変数
 
@@ -126,7 +126,7 @@ def run( rects, srcImage ):
         cv2.imwrite( filePath, faceImage, [ cv2.IMWRITE_JPEG_QUALITY, 100 ] )
 
         # Colabのコンソールに表示
-        clear_output() 
-        logImg = cv2.imread(filePath, cv2.IMREAD_UNCHANGED)
-        cv2_imshow(logImg)
-        
+        # clear_output() 
+        # logImg = cv2.imread(filePath, cv2.IMREAD_UNCHANGED)
+        # cv2_imshow(logImg)
+
