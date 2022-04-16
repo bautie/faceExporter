@@ -55,6 +55,7 @@
 #       160    faceExport.run( data.rects, rotated_image )
 #
 
+import os
 import cv2
 import time
 import math
@@ -74,6 +75,10 @@ gMarginRate     = 0.7                       # マージン ( 1.0 だと、顔9�
 gMinSize        = 200                       # サイズ境界 顔の両方の辺がこれ未満の場合は gExportSmall へ出力する
 
 gRun            = True                      # 実行したくないときは False
+
+os.makedirs('/content/drive/MyDrive/faceExporter/face_in/',exist_ok=True)
+os.makedirs('/content/drive/MyDrive/faceExporter/face_out/',exist_ok=True)
+os.makedirs('/content/drive/MyDrive/faceExporter/face_out/_small/',exist_ok=True)
 
 def run( rects, srcImage ):
 
